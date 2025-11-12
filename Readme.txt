@@ -4,11 +4,13 @@ After Cloning the app follow the steps below to run the app locally.
 2.run "docker compose up -d --build" in a terminal with the path of api app's directory
 3.run the comands below for seeding and setting up migration
 "
+npm i
 docker compose exec api npm run build
 docker compose exec api npm run migration:run:dist
-docker compose exec api npm run seed:dist
+docker compose exec api npm run seed
 "
-4.run "run npm install" in a terminal opened in frontend app's directory
+you should see the message "Seeded admin: admin@example.com / admin123"
+4.run "run npm install" and then "npm run dev" in a terminal opened in frontend app's directory
 5.the default admin credentials are
 admin@example.com
 admin123
